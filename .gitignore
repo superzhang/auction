@@ -1,4 +1,4 @@
-/application/config/*
+/application/config/database.php
 /application/logs
 .htaccess
 sftp-config.json
