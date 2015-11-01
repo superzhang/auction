@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <!DOCTYPE html>
-<?php include (APPPATH . "/views/comm/header.php");?>
+<?php include APPPATH . "/views/comm/header.php";?>
 
 
     <!-- start site's main content area -->
@@ -37,15 +37,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
+<nav>
 
 
-
-
-
-<nav class="pagination" role="navigation">
-    <span class="page-number">第 1 页 &frasl; 共 7 页</span>
-        <a class="older-posts" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+<?php echo $page;?>
 </nav>
+
+
 
 
                 </div>

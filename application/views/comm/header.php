@@ -12,10 +12,11 @@
 
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://cdn.bootcss.com/highlight.js/8.5/styles/monokai_sublime.min.css">
-    <link rel="stylesheet" type="text/css" href="http://www.ghostchina.com/assets/css/screen.css?v=518242e48b" />
+<!--     <link rel="stylesheet" href="http://cdn.bootcss.com/highlight.js/8.5/styles/monokai_sublime.min.css">
+ -->    <link rel="stylesheet" type="text/css" href="/public/css/main.css" />
 
     <script>
     /*====================================================
@@ -32,8 +33,7 @@
 
     <link rel="canonical" href="http://www.1000auction.com/" />
     <link rel="next" href="http://www.1000auction.com/page/2/" />
-    <meta name="generator" content="Ghost 0.6" />
-    <link rel="alternate" type="application/rss+xml" title="Ghost" href="http://www.ghostchina.com/rss/" />
+    <meta name="generator" content="Auction 0.5" />
 </head>
 <body class="home-template">
 
@@ -54,7 +54,7 @@
         </div>
     </header>
     <!-- end header -->
-  <?php $uri_string=$this->uri->uri_string(); ?>
+  <?php $uri_string = $this->uri->uri_string();?>
     <!-- start navigation -->
     <nav class="main-navigation">
         <div class="container">
@@ -68,9 +68,15 @@
                     </div>
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="menu">
-        <li <?php if($uri_string == ''||$uri_string== 'home/index') echo 'class="nav-current"'; ?>role=""><a href="/home/index">首页</a></li>
+        <li <?php if ($uri_string == '' || $uri_string == 'home/index') {
+    echo 'class="nav-current"';
+}
+?>role=""><a href="/home/index">首页</a></li>
         <li  role="presentation"><a href="">房产拍卖</a></li>
-        <li <?php if($uri_string == 'home/web') echo 'class="nav-current"';?>role="presentation"><a href="/home/web">拍卖网站</a></li>
+        <li <?php if ($uri_string == 'home/web') {
+    echo 'class="nav-current"';
+}
+?>role="presentation"><a href="/home/web">拍卖网站</a></li>
         <li  role="presentation"><a href="">全国法院</a></li>
         <li  role="presentation"><a href="/about/">关于</a></li>
 </ul>
