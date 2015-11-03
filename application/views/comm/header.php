@@ -68,15 +68,15 @@
                     </div>
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="menu">
-        <li <?php if ($uri_string == '' || $uri_string == 'home/index') {
+        <li <?php if ($uri_string == '' || count(explode('home', $uri_string)) > 1) {
     echo 'class="nav-current"';
 }
 ?>role=""><a href="/home/index">首页</a></li>
         <li  role="presentation"><a href="">房产拍卖</a></li>
-        <li <?php if ($uri_string == 'home/web') {
+        <li <?php if (count(explode('website', $uri_string)) > 1) {
     echo 'class="nav-current"';
 }
-?>role="presentation"><a href="/home/web">拍卖网站</a></li>
+?>role="presentation"><a href="/website/index">拍卖网站</a></li>
         <li  role="presentation"><a href="">全国法院</a></li>
         <li  role="presentation"><a href="/about/">关于</a></li>
 </ul>

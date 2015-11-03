@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class website extends CI_Controller
 {
 
     /**
@@ -23,7 +23,7 @@ class Home extends CI_Controller
         $this->load->library('pagination');
         $this->load->library('table');
 
-        $config['base_url'] = 'http://www.1000auction.com/home/index';
+        $config['base_url'] = 'http://www.1000auction.com/website/index';
         //$config['total_rows']      = $this->db->query("SELECT * FROM grabinfo;")->num_rows();
         $config['total_rows']      = '600';
         $config['per_page']        = 10;
@@ -46,9 +46,9 @@ class Home extends CI_Controller
         $config['last_tag_close']  = '</li>'; //“最后一页”链接的关闭标签。
         $this->pagination->initialize($config);
         $data['page'] = $this->pagination->create_links();
-        $data['rows'] = $this->auction_m->select_from_page('grabinfo', $config['per_page'], 'create_time', 'desc');
+        $data['rows'] = $this->auction_m->select_from_page('grabtargettype', $config['per_page'], 'grab_num', 'desc');
 
-        $this->load->view('/home/home', $data);
+        $this->load->view('/home/website', $data);
         $this->load->view('/comm/foot');
     }
 

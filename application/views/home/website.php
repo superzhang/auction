@@ -15,9 +15,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <table class="table">
       <thead>
         <tr>
-          <th>项目名称</th>
-          <th>发布时间</th>
-          <th>来源</th>
+          <th>网站名称</th>
+          <th>信息发布量</th>
 
         </tr>
       </thead>
@@ -25,14 +24,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <?php foreach ($rows as $r) {?>
 
         <tr>
-          <th scope="row"><?php echo $r->grab_title;?></th>
-          <td><?php echo $r->create_time;?></td>
-          <td><a href="<?php echo $r->src_record_url;?>" class='btn btn-default'>原始链接</a></td>
+          <th scope="row"><?php echo $r->description;?></th>
+          <td><?php echo $r->grab_num;?></td>
         </tr>
 <?php }
 ?>
       </tbody>
     </table>
+
 
 
 <?php echo $page;?>
