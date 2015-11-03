@@ -23,8 +23,9 @@ class Home extends CI_Controller
         $this->load->library('pagination');
         $this->load->library('table');
 
-        $config['base_url']        = 'http://www.1000auction.com/home/index';
-        $config['total_rows']      = $this->db->query("SELECT * FROM grabinfo;")->num_rows();
+        $config['base_url'] = 'http://www.1000auction.com/home/index';
+        //$config['total_rows']      = $this->db->query("SELECT * FROM grabinfo;")->num_rows();
+        $config['total_rows']      = '600';
         $config['per_page']        = 10;
         $config['num_links']       = 10;
         $config['first_link']      = '第一页';
