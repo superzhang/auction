@@ -31,4 +31,20 @@ class Auction_m extends CI_Model
             return $data;
         }
     }
+
+    public function select_tb_by($db, $per_page, $order_by, $asc)
+    {
+        $this->db->where('src_site_id', '1');
+        $this->db->order_by('start_time', 'desc');
+        $this->db->order_by($order_by, $asc);
+        $page = $this->uri->segment(3);
+        $q    = $this->db->get($db, $per_page, $this->uri->segment(3));
+        if ($q->num_rows() > 0) {
+            foreach ($q->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+
+    }
 }
