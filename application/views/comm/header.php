@@ -32,8 +32,17 @@
     </script>
 
     <link rel="canonical" href="http://www.1000auction.com/" />
-    <link rel="next" href="http://www.1000auction.com/page/2/" />
     <meta name="generator" content="Auction 0.5" />
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?537e38f533fea41a354223646a79f32b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 </head>
 <body class="home-template">
 
@@ -72,13 +81,16 @@
     echo 'class="nav-current"';
 }
 ?>role=""><a href="/home/index">首页</a></li>
-        <li  role="presentation"><a href="">房产拍卖</a></li>
+        <!-- <li  role="presentation"><a href="">房产拍卖</a></li> -->
         <li <?php if (count(explode('website', $uri_string)) > 1) {
     echo 'class="nav-current"';
 }
 ?>role="presentation"><a href="/website/index">拍卖网站</a></li>
-        <li  role="presentation"><a href="">全国法院</a></li>
-        <li  role="presentation"><a href="/about/">关于</a></li>
+        <li <?php if (count(explode('taobao', $uri_string)) > 1): echo 'class="nav-current"';?>
+
+				        <?php endif?>  role="presentation"><a href="/taobao/index">淘宝司法拍卖</a></li>
+        <!-- <li  role="presentation"><a href="">全国法院</a></li> -->
+        <li  role="presentation"><a target="_block" href="/home/about/">关于</a></li>
 </ul>
                     </div>
                 </div>

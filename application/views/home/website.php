@@ -17,6 +17,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <tr>
           <th>网站名称</th>
           <th>信息发布量</th>
+          <th>更新时间</th>
 
         </tr>
       </thead>
@@ -24,8 +25,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <?php foreach ($rows as $r) {?>
 
         <tr>
-          <th scope="row"><?php echo $r->description;?></th>
+          <th scope="row"><a href="<?php echo $r->website;?>"><?php echo $r->description;?></a></th>
           <td><?php echo $r->grab_num;?></td>
+          <td><?php echo $r->update_time;?></td>
         </tr>
 <?php }
 ?>
@@ -53,7 +55,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- end widget -->
 
 <!-- start tag cloud widget -->
-<div class="widget">
+<!-- <div class="widget">
     <h4 class="title">热门地区</h4>
     <div class="content tag-cloud">
 
@@ -70,7 +72,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         <a href="">...</a>
     </div>
-</div>
+</div> -->
 <!-- end tag cloud widget -->
 
 <!-- start widget -->

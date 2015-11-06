@@ -60,4 +60,9 @@ class Home extends CI_Controller
         $this->load->view('/home/web', $data);
         $this->load->view('/comm/foot');
     }
+    public function about()
+    {
+        $this->load->view('/home/about');
+    }
+
 }
