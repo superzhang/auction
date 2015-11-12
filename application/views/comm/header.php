@@ -3,9 +3,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Auction 全国最大的拍卖咨询平台 | auction中国</title>
-    <meta name="description" content="1000auction,中国最大的拍卖资讯平台" />
-    <meta name="keywords" content="1000auction,最全的拍卖资讯平台">
+    <title>1000Auction 全国最大的拍卖咨询平台 | 1000uction中国</title>
+    <meta name="description" content="1000Auction,中国最大的拍卖资讯平台" />
+    <meta name="keywords" content="1000Auction,最全的拍卖资讯平台">
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -88,7 +88,7 @@ var _hmt = _hmt || [];
 ?>role="presentation"><a href="/website/index">拍卖网站</a></li>
         <li <?php if (count(explode('taobao', $uri_string)) > 1): echo 'class="nav-current"';?>
 
-				        <?php endif?>  role="presentation"><a href="/taobao/index">淘宝司法拍卖</a></li>
+						        <?php endif?>  role="presentation"><a href="/taobao/index">淘宝司法拍卖</a></li>
         <!-- <li  role="presentation"><a href="">全国法院</a></li> -->
         <li  role="presentation"><a target="_block" href="/home/about/">关于</a></li>
 </ul>
